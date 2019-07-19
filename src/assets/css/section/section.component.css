@@ -1,0 +1,73 @@
+.contenedor {
+  width: 100%;
+  display: grid;
+  grid-gap: 10vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "middleC     middleC" "vector1     vector2"; }
+
+.contenedor > div {
+  display: block; }
+
+.contenedor .middleC {
+  grid-area: middleC;
+  background: #ff4500;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 40vh; }
+
+.contenedor .vector1 {
+  background-image: url(../../../assets/images/Vector1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 65vh; }
+
+.contenedor .vector2 {
+  background-image: url(../../../assets/images/Vector2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 103.5vh; }
+
+/*  Medias queries respectivas de medio circulo,
+    vector abstracto 1 y vector abstracto 2     */
+@media screen and (max-width: 1200px) {
+  .contenedor .middleC {
+    height: 35vh; }
+  .contenedor .vector1 {
+    height: 55vh; }
+  .contenedor .vector2 {
+    height: 55vh; } }
+
+@media screen and (max-width: 992px) {
+  .contenedor .middleC {
+    height: 30vh; }
+  .contenedor .vector1 {
+    height: 43vh; }
+  .contenedor .vector2 {
+    height: 45vh; } }
+
+@media screen and (max-width: 768px) {
+  .contenedor .middleC {
+    height: 25vh; }
+  .contenedor .vector1 {
+    height: 33vh; }
+  .contenedor .vector2 {
+    height: 33vh; } }
+
+@media screen and (max-width: 576px) {
+  .contenedor .middleC {
+    height: 20vh; }
+  .contenedor .vector1 {
+    height: 23vh; }
+  .contenedor .vector2 {
+    height: 24vh; } }
+
+@media screen and (max-width: 400px) {
+  .contenedor .middleC {
+    height: 15vh; }
+  .contenedor .vector1 {
+    height: 15vh; }
+  .contenedor .vector2 {
+    height: 15vh; } }

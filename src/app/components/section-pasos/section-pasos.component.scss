@@ -1,0 +1,198 @@
+//***********************************************//
+//           Pasos 1, 2, 3 y 4 con sus           //
+//          respectivos textos y medias          //
+//                   queries                     //
+//***********************************************//
+.contenedor-pasos{
+  // Para superponer de forma correcta los pasos y sus textos, sobre las imagenes abstractas
+  position: relative;
+  top: -100vh;
+
+  width: 60%;
+  margin: auto;
+
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns:198px 1fr 198px;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "paso1             contenidoPaso1      contenidoPaso1"
+                       "contenidoPaso2    contenidoPaso2      paso2"
+                       "paso3             contenidoPaso3      contenidoPaso3"
+                       "contenidoPaso4    contenidoPaso4      paso4";
+}
+
+.contenedor-pasos .paso1{
+  grid-area: paso1;
+  background-image: url(../../../assets/images/paso1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  height: 252px;
+}
+
+.contenedor-pasos .contenidoPaso1{
+  grid-area: contenidoPaso1;
+  color: #000;
+  /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); */
+  border-radius: 30px;
+  line-height: 4em;
+  padding: 10px 30px 10px 30px;
+  justify-self: start;
+  align-self: center;
+}
+
+.contenedor-pasos .paso2{
+  grid-area: paso2;
+  background-image: url(../../../assets/images/paso2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  height: 252px;
+}
+
+.contenedor-pasos .contenidoPaso2{
+  grid-area: contenidoPaso2;
+  color: #000;
+  /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); */
+  border-radius: 30px;
+  line-height: 4em;
+  padding: 10px 30px 10px 30px;
+  justify-self: end;
+  align-self: center;
+}
+
+.contenedor-pasos .paso3{
+  grid-area: paso3;
+  background-image: url(../../../assets/images/paso3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  height: 252px;
+}
+
+.contenedor-pasos .contenidoPaso3{
+  grid-area: contenidoPaso3;
+  color: #000;
+  /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); */
+  border-radius: 30px;
+  line-height: 4em;
+  padding: 10px 30px 10px 30px;
+  justify-self: start;
+  align-self: center;
+}
+
+.contenedor-pasos .paso4{
+  grid-area: paso4;
+  background-image: url(../../../assets/images/paso4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  height: 252px;
+}
+
+.contenedor-pasos .contenidoPaso4{
+  grid-area: contenidoPaso4;
+  color: #000;
+  /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); */
+  border-radius: 30px;
+  line-height: 4em;
+  padding: 10px 30px 10px 30px;
+  justify-self: end;
+  align-self: center;
+}
+
+.contenedor-pasos .tituloContenido {
+  font-size: 37px;
+}
+
+.contenedor-pasos .textoContenido {
+  font-size: 30px;
+}
+
+
+@media screen and (max-width: 1200px){
+  .contenedor-pasos{
+    top: -50vh;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .contenedor-pasos{
+    top: -310vh;
+    text-align: center;
+
+    grid-gap: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "paso1"             
+                         "contenidoPaso1"
+                         "paso2"
+                         "contenidoPaso2"
+                         "paso3"             
+                         "contenidoPaso3"
+                         "paso4"
+                         "contenidoPaso4";
+  }
+
+  .contenedor-pasos .paso1,
+  .contenedor-pasos .paso2,
+  .contenedor-pasos .paso3,
+  .contenedor-pasos .paso4 {
+    background-position: center;
+    width: 198px;
+    justify-self: center;
+  }
+
+  .contenedor-pasos .contenidoPaso1,
+  .contenedor-pasos .contenidoPaso2,
+  .contenedor-pasos .contenidoPaso3,
+  .contenedor-pasos .contenidoPaso4 {
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .contenedor-pasos{
+    top: -300vh;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .contenedor-pasos{
+    top: -290vh;
+  }
+
+  .contenedor-pasos .tituloContenido{
+    font-size: 27px;
+    line-height: 2em;
+  }
+
+  .contenedor-pasos .textoContenido{
+    font-size: 24px;
+    line-height: 2em;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .contenedor-pasos{
+    top: -290vh;
+    width: 100%;
+  }
+
+  .contenedor-pasos .paso1,
+  .contenedor-pasos .paso2,
+  .contenedor-pasos .paso3,
+  .contenedor-pasos .paso4 {
+    //Para poder centrar las imagenes de los pasos en el centro del contenedor
+    // Medidas sacadas de Figma
+    width: 118px;
+    height: 150px;
+    justify-self: center;
+    border-radius: 15px;
+  }
+}
